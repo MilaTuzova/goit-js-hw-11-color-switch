@@ -1,0 +1,2 @@
+:root{--timing-function:cubic-bezier(0.4,0,0.2,1)}*,:after,:before{box-sizing:border-box}.container{display:flex;justify-content:center;padding:50px}button{margin-right:10px;border:none;background-color:rgba(255,0,43,.87);color:#fff;padding:10px 20px;align-items:center;font-size:24px;border-radius:4px;cursor:pointer}button.is-active{background-color:grey}
+/*# sourceMappingURL=/goit-js-hw-11-color-switch/src.d361f768.css.map */
