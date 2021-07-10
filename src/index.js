@@ -21,9 +21,30 @@ const body = document.querySelector('body');
 const start = document.querySelector('[data-start]');
 const stop = document.querySelector('[data-stop]');
 
+let timerId = null;
+
 start.addEventListener('click', onStartSwitchColors);
 stop.addEventListener('click', onStopSwitchColors);
 
+
+
 function onStartSwitchColors() {
-    start.classList.add('is-active')
+    console.log('click')
+    start.setAttribute('disabled', true);
+    // if (start.classList.contains === 'is-active') {
+    //     console.log('aaa')
+    //     return;
+    // }
+    start.classList.add('is-active');
+
+    timerId = setInterval(() => {
+        body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length - 1)]
+    }, 1000)
+
+}
+
+function onStopSwitchColors() {
+    clearInterval(timerId);
+    start.classList.remove('is-active');
+    start.removeAttribute('disabled');
 }
