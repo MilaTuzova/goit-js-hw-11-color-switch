@@ -26,21 +26,16 @@ let timerId = null;
 start.addEventListener('click', onStartSwitchColors);
 stop.addEventListener('click', onStopSwitchColors);
 
-
-
 function onStartSwitchColors() {
-    console.log('click')
+    // console.log('click')
     start.setAttribute('disabled', true);
-    // if (start.classList.contains === 'is-active') {
-    //     console.log('aaa')
-    //     return;
-    // }
+
     start.classList.add('is-active');
 
     timerId = setInterval(() => {
-        body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length - 1)]
-    }, 1000)
-
+        // console.log(colors[randomIntegerFromInterval(1, colors.length - 1)]);
+        body.style.backgroundColor = colors[randomIntegerFromInterval(1, colors.length - 1)]
+    }, 1000);
 }
 
 function onStopSwitchColors() {
